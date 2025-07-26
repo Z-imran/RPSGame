@@ -42,8 +42,8 @@ function isGameOver() {
 function playGame() {
     while (!isGameOver()) {
         playRound(getHumanChoice(), getCompChoice());
-        console.log(player_score);
-        console.log(comp_score);
+        console.log(`Player Score: ${player_score}`);
+        console.log(`Comp   Score: ${comp_score}`);
     }
     if (player_score === 5) {
         console.log("You Won");
