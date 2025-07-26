@@ -33,6 +33,23 @@ function playRound(human_choice, comp_choice) {
     }
 }
 
-playRound(getHumanChoice(), getCompChoice());
-console.log(player_score);
-console.log(comp_score);
+
+
+function isGameOver() {
+    return player_score === 5 || comp_score === 5;
+}
+
+function playGame() {
+    while (!isGameOver()) {
+        playRound(getHumanChoice(), getCompChoice());
+        console.log(player_score);
+        console.log(comp_score);
+    }
+    if (player_score === 5) {
+        console.log("You Won");
+    } else {
+        console.log("You Lost");
+    }
+}
+
+playGame();
